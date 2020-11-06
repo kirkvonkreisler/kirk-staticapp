@@ -2,12 +2,22 @@
 
 {% block page_title %}Capt. McGillicutty's Ship's Log{% endblock %}
 
+{% block page_description %}Blog of Pirate Capt. McGillicutty.{% endblock %}
+
 {% block content %}
 <div class="container">
   <div class="row">
     <div class="col-md-8 offset-md-2">
       <h1>A pirate's life is for me</h1>
-      <p>Hempen halter mizzenmast deadlights gaff pillage starboard jack lee Blimey draught. Man-of-war piracy black jack sutler Yellow Jack keel provost overhaul execution dock rigging. Log quarterdeck dead men tell no tales red ensign gibbet grog blossom bilge Nelsons folly code of conduct gunwalls.</p>
+      <p class="mb-4">Hempen halter mizzenmast deadlights gaff pillage starboard jack lee Blimey draught. Man-of-war piracy black jack sutler Yellow Jack keel provost overhaul execution dock rigging. Log quarterdeck dead men tell no tales red ensign gibbet grog blossom bilge Nelsons folly code of conduct gunwalls.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      {% for piece in blog.blogs %}
+      <p class="pt-3 border-top border-info">{{ piece.date }}</p>
+      <h4 class="my-3"><a href="blog/{{ piece.slug }}.html">{{ piece.headline }}</a></h4>
+      {% endfor %}
     </div>
   </div>
 </div>

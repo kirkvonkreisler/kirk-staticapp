@@ -1,9 +1,13 @@
 {% extends '_templates/base.njk' %}
 
+{% block page_title %}Golden Age Ships{% endblock %}
+
+{% block page_description %}Research on the ships of the Golden Age of Piracy.{% endblock %}
+
 {% block content %}
 <article class="container">
   <h1>Ships of the Golden Age of pirates</h1>
-  <p>Intro text here.</p>
+  <p>Learn about the famous ships and pirates of the Golden Age of Piracy.</p>
   <div class="row">
     {% for ship in pirates.ships %}
     <div class="col-sm-6 col-lg-4">
